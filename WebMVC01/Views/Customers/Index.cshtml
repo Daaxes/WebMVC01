@@ -1,0 +1,43 @@
+﻿@model List<Customer> // This list will our modle for Index View
+
+@{
+	ViewData["Title"] = "Customer Index";
+}
+
+<h1>Customers Index</h1>
+
+<p>
+	<a asp-action="Create">Create New</a>
+</p>
+
+	<table class="table">
+		<tr>
+			<td>First Name</td>
+			<td>Last Name</td>
+			<td>Year</td>
+			<td>SSN</td>
+		</tr>
+@foreach(Customer item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.FirstName)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.LastName)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Year)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.SSN)
+			</td>
+			<td>
+				<a asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a> |
+				<a asp-action="Details" asp-route-id="@item.CustomerId">Details</a> |
+				<a asp-action="Delete" asp-route-id="@item.CustomerId">Delete</a>
+			</td>
+		</tr>
+	}
+</table>
+

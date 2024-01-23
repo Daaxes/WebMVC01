@@ -1,0 +1,16 @@
+﻿@model Customer
+
+@{
+	ViewData["Title"] = "Edit Customer";
+}
+
+<h1>Edit Customer</h1>
+
+<form asp-action="Edit">
+	<input type="hidden" asp-for="CustomerId" />
+	First Name:<input type="text" name="FirstName" asp-for="FirstName" />
+	Last Name:<input type="text" name="LastName" asp-for="LastName" />
+	Year:<input type="text" name="Year" asp-for="Year" />
+	SSN:<input type="text" name="SSN" asp-for="SSN" />
+	<input type="submit" value="Save" />
+</form>

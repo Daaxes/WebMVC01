@@ -1,0 +1,15 @@
+﻿@model Customer
+
+@{
+    ViewData["Title"] = "Create Customer";
+}
+
+<h1>Create Customers</h1>
+
+<form asp-action="Create">
+    First Name: <input type="text" name="FirstName" />
+    Last Name: <input type="text" name="LastName" />
+    Year: <input type="text" name="Year" />
+    SSN: <input type="text" name="SSN" />
+    <input type="submit" value="Create Customer" />
+</form>

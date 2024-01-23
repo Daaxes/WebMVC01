@@ -1,0 +1,22 @@
+﻿@model Customer
+
+@{
+    ViewData["Title"] = "Info on  Customer";
+}
+
+<h1>Customers Details</h1>
+
+Id:
+@Html.DisplayFor(model => model.CustomerId)
+<br />
+First Name:
+@Html.DisplayFor(model => model.FirstName)
+<br />
+Last Name:
+@Html.DisplayFor(model => model.LastName)
+<br />
+Year:
+@Html.DisplayFor(model => model.Year)
+SSN:
+@Html.DisplayFor(model => model.SSN)
+<br />
