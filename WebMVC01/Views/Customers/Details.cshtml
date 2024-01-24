@@ -5,18 +5,36 @@
 }
 
 <h1>Customers Details</h1>
-
-Id:
-@Html.DisplayFor(model => model.CustomerId)
-<br />
-First Name:
-@Html.DisplayFor(model => model.FirstName)
-<br />
-Last Name:
-@Html.DisplayFor(model => model.LastName)
-<br />
-Year:
-@Html.DisplayFor(model => model.Year)
-SSN:
-@Html.DisplayFor(model => model.SSN)
-<br />
+<hr />
+    <dl class="row>"
+        <dt class="col-sm-2">
+            Id:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CustomerId)
+        </dd>
+        <dt class="¨col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SSN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SSN)
+        </dd>
+    </dl>
